@@ -1,0 +1,42 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+
+    "cypress:run:chrome:headless": "cypress run --browser chrome --headless",
+    "cypress:run:chrome:headed": "cypress run --browser chrome",
+
+    "cypress:run:firefox:headless": "cypress run --browser firefox --headless",
+    "cypress:run:firefox:headed": "cypress run --browser firefox",
+
+    "cypress:run:edge:headless": "cypress run --browser edge --headless",
+    "cypress:run:edge:headed": "cypress run --browser edge",
+
+    "cypress:run:electron:headless": "cypress run --browser electron --headless",
+    "cypress:run:electron:headed": "cypress run --browser electron",
+
+    "cypress:run:loginPageTest:electron:headless": "cypress run --browser electron --headless --spec 'cypress/e2e/test/loginPageTest.cy.ts'",
+    "cypress:run:bankPageTest:electron:headless": "cypress run --browser electron --headless --spec 'cypress/e2e/test/BankAccountPageTest.cy.ts'",
+    "cypress:run:allTests:electron:headless": "npm run cypress:run:loginPageTest:electron:headless && npm run cypress:run:bankPageTest:electron:headless",
+
+    "cypress:run:loginPageTest": "npx cypress run --spec 'cypress/e2e/test/loginPageTest.cy.ts'",
+    "cypress:run:bankPageTest": "npx cypress run --spec 'cypress/e2e/test/BankAccountPageTest.cy.ts'",
+    "cypress:run:allTests": "npm run cypress:run:loginPageTest && npm run cypress:run:bankPageTest"
+
+
+
+  },
+  "author": "Prabhakar Y",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.1"
+  },
+  "dependencies": {
+    "typescript": "^5.5.4"
+  }
+}

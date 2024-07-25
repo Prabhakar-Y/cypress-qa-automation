@@ -1,0 +1,11 @@
+{
+  "validUser":{
+    "username": "Heath93",
+    "password": "s3cret"
+  },
+    "invalidUser":{
+      "username": "WrongName123",
+      "password": "WrongPassword12"
+    }
+  }
+
