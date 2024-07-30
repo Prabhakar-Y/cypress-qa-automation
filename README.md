@@ -15,7 +15,10 @@ This setup follows a **Page Object Model design pattern** for better maintainabi
   - Electron version: 27.3.10
   - Bundled Node version: 18.17.1
 - Typescript (>=v5.5.3)
-    
+
+### Reporting plugin
+- @mmisty/cypress-allure-adapter
+- Refer https://www.npmjs.com/package/@mmisty/cypress-allure-adapter
  
 ### Installation
 1. **Clone the repository:**
