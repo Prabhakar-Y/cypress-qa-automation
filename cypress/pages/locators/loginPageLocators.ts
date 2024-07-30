@@ -1,9 +1,7 @@
 export const LoginPageLocators ={
-     userNameInputField: '#username',
-     passwordInputField: '#password',
-     submitButton: 'span.MuiButton-label',
-     loginErrorMessage:'div.MuiAlert-message',
-     userLoggedInName:'h6.MuiTypography-root.MuiTypography-subtitle1.MuiTypography-colorTextPrimary:nth-child(1)'
-
-
+     userNameInputField: '[data-test="signin-username"]',
+     passwordInputField: '[data-test="signin-password"]',
+     submitButton: '[data-test="signin-submit"]',
+     loginErrorMessage:'[data-test="signin-error"]',
+     userLoggedInName:'[data-test="sidenav-user-full-name"]'
 }

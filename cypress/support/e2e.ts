@@ -15,6 +15,17 @@
 
 // Import commands.js using ES2015 syntax:
 import '.'
+import '@mmisty/cypress-allure-adapter/support'
+
+
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+//Exception handling globally for all test/spec files.
+Cypress.on('fail',(error,runnable)=>{
+        cy.log(error.message);
+        return false;
+});
+

@@ -21,7 +21,7 @@ describe('Login Page Tests - Test Suite',() => {
 
 
     it('Test Case 1: Should allow the user to login with valid credentials', ()=>{
-         cy.visit('/');
+        cy.visit('/');
         // const validUser=userData.validUser;
         // loginPage.enterUserName(validUser.username);
         // loginPage.enterPassword(validUser.password);
@@ -37,8 +37,8 @@ describe('Login Page Tests - Test Suite',() => {
     //     loginPage.assertErrorMessage('Username or password is invalid');
     // });  
 
-    it('Test Case 2: Check login session',()=>{
-        console.log("Testing");
-    })
+    // it('Test Case 2: Check login session',()=>{
+    //     console.log("Testing");
+    // })
 });
 

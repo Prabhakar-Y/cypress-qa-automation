@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+//require('@shelex/cypress-allure-plugin');
 import {LoginPageLocators} from "../pages/locators/loginPageLocators";
 import userData from "../fixtures/users.json";
 
@@ -52,8 +53,8 @@ Cypress.Commands.add('login',(username:string,password:string)=>{
 
 Cypress.Commands.add('loginWithSession',(username:string,password:string) =>{
     const validUser=userData.validUser;
-    //const baseUrl = `${Cypress.config('baseUrl')}/signin`;
-    const baseUrl = `${Cypress.config('baseUrl')}`;
+    const baseUrl = `${Cypress.config('baseUrl')}/signin`;
+   // const baseUrl = `${Cypress.config('baseUrl')}`;
     cy.session([username,password],()=>{
         cy.visit(baseUrl); 
         cy.url().should('include', baseUrl); 

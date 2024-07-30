@@ -4,36 +4,36 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "npx cypress open",
-    "cypress:run": "npx cypress run",
-
+    "cypress:run": "npx cypress run --env allure=true",
     "cypress:run:chrome:headless": "cypress run --browser chrome --headless",
     "cypress:run:chrome:headed": "cypress run --browser chrome",
-
     "cypress:run:firefox:headless": "cypress run --browser firefox --headless",
     "cypress:run:firefox:headed": "cypress run --browser firefox",
-
     "cypress:run:edge:headless": "cypress run --browser edge --headless",
     "cypress:run:edge:headed": "cypress run --browser edge",
-
     "cypress:run:electron:headless": "cypress run --browser electron --headless",
     "cypress:run:electron:headed": "cypress run --browser electron",
-
     "cypress:run:loginPageTest:electron:headless": "cypress run --browser electron --headless --spec 'cypress/e2e/test/loginPageTest.cy.ts'",
     "cypress:run:bankPageTest:electron:headless": "cypress run --browser electron --headless --spec 'cypress/e2e/test/BankAccountPageTest.cy.ts'",
-    "cypress:run:allTests:electron:headless": "npm run cypress:run:loginPageTest:electron:headless && npm run cypress:run:bankPageTest:electron:headless",
-
-    "cypress:run:loginPageTest": "npx cypress run --spec 'cypress/e2e/test/loginPageTest.cy.ts'",
-    "cypress:run:bankPageTest": "npx cypress run --spec 'cypress/e2e/test/BankAccountPageTest.cy.ts'",
-    "cypress:run:allTests": "npm run cypress:run:loginPageTest && npm run cypress:run:bankPageTest"
-
-
-
+    "cypress:run:logoutPageTest:electron:headless": "cypress run --browser electron --headless --spec 'cypress/e2e/test/logoutPageTest.cy.ts'",
+    "cypress:run:allTests:electron:headless": "npm run cypress:run:loginPageTest:electron:headless && npm run cypress:run:bankPageTest:electron:headless && npm run cypress:run:logoutPageTest",
+    "cypress:run:loginPageTest": "npx cypress run --spec 'cypress/e2e/test/loginPageTest.cy.ts' --env allure=true",
+    "cypress:run:bankPageTest": "npx cypress run --spec 'cypress/e2e/test/BankAccountPageTest.cy.ts' --env allure=true",
+    "cypress:run:logoutPageTest": "npx cypress run --spec 'cypress/e2e/test/logoutPageTest.cy.ts' --env allure=true",
+    "cypress:run:allTests": "npm run cypress:run:loginPageTest && npm run cypress:run:bankPageTest && npm run cypress:run:logoutPageTest",
+    "cy:run": "cypress run --env allure=true --headed",
+    "ui-regression-allure": "cypress run --browser electron --spec cypress/e2e/test/loginPageTest.cy.ts --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
   },
   "author": "Prabhakar Y",
   "license": "ISC",
   "devDependencies": {
+    "@mmisty/cypress-allure-adapter": "^2.6.2",
+    "allure-commandline": "^2.29.0",
     "cypress": "^13.13.1"
   },
   "dependencies": {

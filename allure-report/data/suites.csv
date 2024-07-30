@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jul 30 18:55:19 IST 2024","Tue Jul 30 18:55:20 IST 2024","637","Logout Page Test","","","","","Test Case 1: User logout",""
+"passed","Tue Jul 30 18:55:12 IST 2024","Tue Jul 30 18:55:14 IST 2024","1103","Bank Account Page Tests","","","","","Test Case 3: Should allow user to enter bank details and save",""
+"passed","Tue Jul 30 18:55:12 IST 2024","Tue Jul 30 18:55:12 IST 2024","591","Bank Account Page Tests","","","","","Test Case 2: Should navigate to create bank account page",""
+"passed","Tue Jul 30 18:55:05 IST 2024","Tue Jul 30 18:55:06 IST 2024","1148","Login Page Tests - Test Suite","","","","","Test Case 1: Should allow the user to login with valid credentials",""
+"passed","Tue Jul 30 18:55:14 IST 2024","Tue Jul 30 18:55:14 IST 2024","609","Bank Account Page Tests","","","","","Test Case 4: Should display the created bank account in the list",""
+"passed","Tue Jul 30 18:55:11 IST 2024","Tue Jul 30 18:55:12 IST 2024","628","Bank Account Page Tests","","","","","Test Case 1: Should display the bank account page title",""
+"passed","Tue Jul 30 18:53:27 IST 2024","Tue Jul 30 18:53:27 IST 2024","42","Sample Test","","","","","should pass",""
