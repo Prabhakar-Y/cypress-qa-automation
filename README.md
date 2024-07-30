@@ -19,6 +19,8 @@ This setup follows a **Page Object Model design pattern** for better maintainabi
 ### Reporting plugin
 - @mmisty/cypress-allure-adapter
 - Refer https://www.npmjs.com/package/@mmisty/cypress-allure-adapter
+#### NOTE
+  - Known issue https://stackoverflow.com/questions/78801735/cypress-allure-report-created-but-allure-results-folder-not-generated/78807481#78807481
  
 ### Installation
 1. **Clone the repository:**
