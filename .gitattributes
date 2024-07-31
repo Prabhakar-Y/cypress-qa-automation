@@ -1,0 +1,2 @@
+allure-report/widgets/environment.json filter=lfs diff=lfs merge=lfs -text
+allure-results/environment.properties filter=lfs diff=lfs merge=lfs -text
