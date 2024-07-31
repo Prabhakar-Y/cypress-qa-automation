@@ -19,6 +19,14 @@ import '@mmisty/cypress-allure-adapter/support'
 
 
 
+// Adding Allure enviorment variables to the report 
+// Cypress.on('test:before:run',() =>{
+//         const allure=Cypress.Allure as any;
+//         allure.addEnvironmentInfo('Base URL', Cypress.config('baseUrl'));
+//         allure.addEnvironmentInfo('Browser', Cypress.browser.name);
+//         allure.addEnvironmentInfo('Platform', Cypress.env('platform') || 'macOS');
+//         allure.addEnvironmentInfo('Cypress Version', Cypress.version);
+// });
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

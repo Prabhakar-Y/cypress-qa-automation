@@ -12,7 +12,11 @@ describe('Logout Page Test',()=>{
     });
    
     it('Test Case 1: User logout',()=>{
-       logoutPage.clickOnLogout();
+        cy.allure().feature('Logout');
+        cy.allure().story('User Logout');
+        cy.allure().startStep('Click on Logout');
+        logoutPage.clickOnLogout();
+        cy.allure().endStep();
     });
 
 });

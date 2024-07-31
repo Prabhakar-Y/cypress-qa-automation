@@ -4,6 +4,7 @@ import { configureAllureAdapterPlugins } from '@mmisty/cypress-allure-adapter/pl
 
 
 
+
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
@@ -11,17 +12,11 @@ export default defineConfig({
       return config;
   },
     baseUrl: "http://localhost:3000",
-   // specPattern: "cypress/e2e/**/*.cy.ts",
-  //  supportFile: 'cypress/support/e2e.ts',
-  //  reporter: 'cypress-mochawesome-reporter',
-   // reporterOptions: {
-    //   reportDir: 'cypress/reports',
-    //   overwrite: false,
-    //   html: false,
-    //   json: true,
-    // },
-    // env: {
-    //   allure: true,
-    // },
+    env: {
+      allure: true,
+      // browser: process.env.BROWSER || 'default',
+      // platform: process.env.PLATFORM || 'macOS'
+
+    },
   },
 });

@@ -40,6 +40,7 @@ import userData from "../fixtures/users.json";
 //   }
 // }
 
+
 Cypress.Commands.add('login',(username:string,password:string)=>{
     const validUser=userData.validUser;
     const baseUrl = `${Cypress.config('baseUrl')}/signin`;
@@ -65,4 +66,14 @@ Cypress.Commands.add('loginWithSession',(username:string,password:string) =>{
         
     })
 })
+
+Cypress.Commands.add('setEnvironmentDetails', (details: Record<string, string>) => {
+    const allure = (Cypress as any).allure;
+    if (allure) {
+      Object.entries(details).forEach(([key, value]) => {
+        allure.addEnvironment(key, value);
+      });
+    }
+  });
+  
 
