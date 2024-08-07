@@ -16,7 +16,16 @@
 // Import commands.js using ES2015 syntax:
 import '.'
 import '@mmisty/cypress-allure-adapter/support'
+import '@cypress/grep/src/support';
 
+// If using "require" function:
+// const registerCypressGrep = require('@cypress/grep');
+// registerCypressGrep();
+
+
+// @ts-ignore
+import registerCypressGrep from '@cypress/grep/src/support';
+registerCypressGrep();
 
 
 // Adding Allure enviorment variables to the report 

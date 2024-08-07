@@ -42,7 +42,7 @@ describe('Login Page Tests - Test Suite',() => {
             // });
         });
     
-    it('Test Case 1: Should display all required login page elements',()=>{
+    it('Test Case 1: Should display all required login page elements', {tags:'@critical'},()=>{
        // cy.visit(baseUrl);
         cy.allure().feature('Login');
         cy.allure().story('Login Page Elements');
@@ -63,7 +63,7 @@ describe('Login Page Tests - Test Suite',() => {
     });
 
 
-    it('Test Case 2: Should allow the user to login with valid credentials', ()=>{
+    it('Test Case 2: Should allow the user to login with valid credentials',{tags:'@smoke'}, ()=>{
         cy.allure().startStep("Visiting the HomePage ")
         cy.visit('/');
         cy.allure().endStep();

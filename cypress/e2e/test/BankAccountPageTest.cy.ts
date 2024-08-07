@@ -14,7 +14,7 @@ describe('Bank Account Page Tests' ,() =>{
     });
 
 
-    it('Test Case 1: Should display the bank account page title',()=>{
+    it('Test Case 1: Should display the bank account page title',{ tags: '@smoke @regression' },()=>{
         cy.allure().feature('Bank Accounts');
         cy.allure().story('Display Bank Account Page Title');
         bankAccountPage.clickOnBankAccountMenu();
@@ -24,7 +24,7 @@ describe('Bank Account Page Tests' ,() =>{
         cy.allure().endStep();
     });
 
-    it('Test Case 2: Should navigate to create bank account page', () => {
+    it('Test Case 2: Should navigate to create bank account page',{ tags: '@smoke' }, () => {
         bankAccountPage.clickOnCreateButton();
         cy.allure().startStep('Assert Create Bank Account Page Title');
         bankAccountPage.assertCreateBankAccountPageTitle('Create Bank Account'); 
@@ -32,7 +32,7 @@ describe('Bank Account Page Tests' ,() =>{
     });
 
 
-    it('Test Case 3: Should allow user to enter bank details and save', () => {
+    it('Test Case 3: Should allow user to enter bank details and save', { tags: '@regression' },() => {
         cy.visit('/bankaccounts/new');
         bankAccountPage.enterBankNameTextField('CypressBankingSolution');
         bankAccountPage.enterRoutingNumberTextField('123456789');
@@ -40,7 +40,7 @@ describe('Bank Account Page Tests' ,() =>{
         bankAccountPage.clickSaveButton();
     });
 
-    it('Test Case 4: Should display the created bank account in the list', () => {
+    it('Test Case 4: Should display the created bank account in the list', { tags: '@critical' },() => {
         cy.allure().startStep('Assert Created Bank Account is Visible in List');
         cy.get('ul[data-test="bankaccount-list"] li')
         .contains('CypressBankingSolution')

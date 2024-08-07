@@ -11,7 +11,7 @@ describe('Logout Page Test',()=>{
      
     });
    
-    it('Test Case 1: User logout',()=>{
+    it('Test Case 1: User logout',{ tags: '@smoke @regression @critical' },()=>{
         cy.allure().feature('Logout');
         cy.allure().story('User Logout');
         cy.allure().startStep('Click on Logout');
