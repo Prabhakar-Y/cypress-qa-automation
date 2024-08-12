@@ -1,8 +1,6 @@
 import { BankAccountPage } from "../../pages/BankAccountPage"; 
 import userData from "../../fixtures/users.json";
 
-
-
 describe('Bank Account Page Tests' ,() =>{
     const bankAccountPage=new BankAccountPage();
     const validUser=userData.validUser;

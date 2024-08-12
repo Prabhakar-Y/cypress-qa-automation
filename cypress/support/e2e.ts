@@ -18,9 +18,7 @@ import '.'
 import '@mmisty/cypress-allure-adapter/support'
 import '@cypress/grep/src/support';
 
-// If using "require" function:
-// const registerCypressGrep = require('@cypress/grep');
-// registerCypressGrep();
+
 
 
 // @ts-ignore

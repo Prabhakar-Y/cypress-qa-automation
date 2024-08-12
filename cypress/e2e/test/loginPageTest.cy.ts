@@ -1,7 +1,7 @@
 
 import { LoginPage } from "../../pages/LoginPage";
 import userData from "../../fixtures/users.json";
-import { DESKTOP_BROWSERS } from "appium/build/lib/constants";
+
 
 
 describe('Login Page Tests - Test Suite',() => {
@@ -42,11 +42,12 @@ describe('Login Page Tests - Test Suite',() => {
             // });
         });
     
-    it('Test Case 1: Should display all required login page elements', {tags:'@critical'},()=>{
+    it('Test Case 1: Should display all required login page elements',()=>{
        // cy.visit(baseUrl);
         cy.allure().feature('Login');
         cy.allure().story('Login Page Elements');
-
+        
+        
 
         cy.allure().startStep('Assert username field is visible');
         loginPage.assertUserNameFieldVisible();
@@ -58,18 +59,24 @@ describe('Login Page Tests - Test Suite',() => {
 
         cy.allure().startStep('Assert submit button is visible');
         loginPage.assertSubmitButtonVisible();
+
+        cy.compareSnapshot('login-page');
+
         cy.allure().endStep();
 
     });
 
 
-    it('Test Case 2: Should allow the user to login with valid credentials',{tags:'@smoke'}, ()=>{
+    it('Test Case 2: Should allow the user to login with valid credentials', ()=>{
         cy.allure().startStep("Visiting the HomePage ")
         cy.visit('/');
         cy.allure().endStep();
        
         cy.allure().startStep("Assert the user is loggged in")
         loginPage.assertUserLoggedIn('Ted P');
+       
+        cy.compareSnapshot('homepage-after-login');
+
         cy.allure().endStep();
     });
 
